@@ -6,6 +6,7 @@ import Aux from '../hoc/Aux';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 import AuthContext from '../context/auth-context';
+import OtherPersons from '../components/Persons/OtherPersons';
 
 class App extends Component {
   constructor(props) {
@@ -85,12 +86,13 @@ class App extends Component {
 
     if (this.state.showPersons) {
       persons = (
-        <Persons
-          persons={this.state.persons}
-          clicked={this.deletePersonHandler}
-          changed={this.nameChangedHandler}
-          isAuthenticated = {this.state.authenticated}
-        />
+        <div>
+          <OtherPersons 
+            otherPersons={this.state.persons} 
+            clicked={this.deletePersonHandler}
+            changed={this.nameChangedHandler}
+            />
+        </div>
       );
     }
 

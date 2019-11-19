@@ -8,7 +8,7 @@ import AuthContext from '../../../context/auth-context';
 class Person extends Component {
   constructor(props) {
     super(props);
-    this.inputElement = React.createRef();
+    this.inputElementRef = React.createRef();
   }
 
   static contextType = AuthContext;
